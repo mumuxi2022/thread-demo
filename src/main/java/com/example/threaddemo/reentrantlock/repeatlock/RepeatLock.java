@@ -6,7 +6,7 @@ package com.example.threaddemo.reentrantlock.repeatlock;
  * 可重入锁
  */
 public class RepeatLock {
-    boolean isLocked = false;//标志位，表示该锁是否已经被线程占用
+    volatile boolean  isLocked = false;//标志位，表示该锁是否已经被线程占用
     Thread lockedBy = null;//线程，用来存储获取到该锁的线程
     int lockedCount = 0;  //被锁了几次
 
