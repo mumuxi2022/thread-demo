@@ -10,7 +10,7 @@ import java.util.Date;
 public class ThreadLocalDemo01 {
     //这里不会出现线程不安全的问题
     public static void main(String[] args) throws InterruptedException {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1000; i++) {
             int s = i;
             new Thread(()->{
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:ss");

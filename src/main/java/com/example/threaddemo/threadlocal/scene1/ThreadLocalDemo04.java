@@ -19,6 +19,11 @@ public class ThreadLocalDemo04 {
                 Date date = new Date(1000*s);
                 SimpleDateFormat dateFormat = dateFormatThreadLocal.get();
                 String data = dateFormat.format(date);
+                //此方法返回给定对象的哈希码值，
+                //这个哈希码值实际上是对象在内存中的地址的映射，因此可以用来表示对象的内存地址。
+                //这个哈希码值并不是对象的唯一标识符，因为它是由对象的内存地址计算得出的，
+                //因此它可能会因为JVM的不同实现或不同运行时环境而发生变化。
+//                System.out.println(System.identityHashCode(dateFormat));
                 System.out.println(data);
             });
         }

@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class HashDemo {
     public static void main(String[] args) {
-        HashMap map = new HashMap(0);
+        HashMap map = new HashMap(10);
         map.put("girl", 18);
         map.put("woman", 48);
         map.get("girl");
