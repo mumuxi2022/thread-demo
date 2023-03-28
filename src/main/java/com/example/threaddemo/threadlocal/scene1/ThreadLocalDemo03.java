@@ -11,13 +11,13 @@ import java.util.concurrent.Executors;
  */
 public class ThreadLocalDemo03 {
     public static ExecutorService threadPool = Executors.newFixedThreadPool(16);
-    public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:ss");
+    public static SimpleDateFormat girl = new SimpleDateFormat("mm:ss");
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i < 1000; i++) {
             int s = i;
             threadPool.submit(()->{
                 Date date = new Date(1000*s);
-                String data = simpleDateFormat.format(date);
+                String data = girl.format(date);
                 System.out.println(data);
             });
         }

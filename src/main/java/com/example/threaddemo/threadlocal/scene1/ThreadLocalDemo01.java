@@ -13,9 +13,9 @@ public class ThreadLocalDemo01 {
         for (int i = 0; i < 1000; i++) {
             int s = i;
             new Thread(()->{
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:ss");
+                SimpleDateFormat girl = new SimpleDateFormat("mm:ss");
                 Date date = new Date(1000*s);
-                String data = simpleDateFormat.format(date);
+                String data = girl.format(date);
                 System.out.println(data);
             }).start();
             Thread.sleep(100);
